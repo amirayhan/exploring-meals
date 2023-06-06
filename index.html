@@ -8,15 +8,39 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
     </head>
     <body>
-        <section class="heading text-center">
+        <!-- heading section start -->
+        <section class="heading text-center mt-3">
             <h1>Exploring Food</h1>
             <h3>My Meals</h3>
         </section>
+        <!-- heading section end -->
+
+        <!-- search meals section start -->
+        <section id="search_meals" class="py-10 my-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <input id="input_id" type="text" class="form-control" placeholder="Write Meals type" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                            <div class="input-group-append">
+                                <button id="search" onclick="searchMeals()" class="btn btn-secondary" type="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- search meals section end -->
+
+        <!-- meals section start -->
         <section id="meals">
             <div class="container">
                 <div id="meals_container" class="row row-cols-1 row-cols-md-3 g-4"></div>
             </div>
         </section>
+        <!-- meals section end -->
+
+        <!-- scripts -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <script src="js/meals.js"></script>
     </body>

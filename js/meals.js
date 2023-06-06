@@ -1,13 +1,15 @@
 const loadMeals = (search) => {
-    const url = `www.themealdb.com/api/json/v1/1/search.php?s=${search}`;
+    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`;
+    console.log(url);
     fetch(url)
         .then((res) => res.json())
         .then((data) => displayMeals(data.meals));
 };
+
 const displayMeals = (meals) => {
     const mealContainer = document.getElementById("meals_container");
+    mealContainer.innerHTML = ``;
     meals.forEach((meal) => {
-        console.log(meal);
         const mealsDiv = document.createElement("div");
         mealsDiv.classList.add("col");
         mealsDiv.innerHTML = `
@@ -22,4 +24,11 @@ const displayMeals = (meals) => {
         mealContainer.appendChild(mealsDiv);
     });
 };
-loadMeals("fish");
+
+searchMeals = () => {
+    const inputField = document.getElementById("input_id");
+    searchText = inputField.value;
+    loadMeals(searchText);
+    inputField.value = "";
+};
+loadMeals();
