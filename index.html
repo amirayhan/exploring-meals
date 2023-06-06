@@ -10,7 +10,7 @@
     <body>
         <!-- heading section start -->
         <section class="heading text-center mt-3">
-            <h1>Exploring Food</h1>
+            <h1 class="text-danger" style="font-weight: 700">Exploring Food</h1>
             <h3>My Meals</h3>
         </section>
         <!-- heading section end -->
@@ -23,7 +23,7 @@
                         <div class="input-group mb-3">
                             <input id="input_id" type="text" class="form-control" placeholder="Write Meals type" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                             <div class="input-group-append">
-                                <button id="search" onclick="searchMeals()" class="btn btn-secondary" type="button">Search</button>
+                                <button id="search" onclick="searchMeals()" class="btn btn-danger" type="button">Search</button>
                             </div>
                         </div>
                     </div>
@@ -31,6 +31,14 @@
             </div>
         </section>
         <!-- search meals section end -->
+
+        <!-- details meal section start -->
+        <section id="details_meal">
+            <div class="container">
+                <div id="meals_details_container" class="row row-cols-2 mb-5 justify-content-center"></div>
+            </div>
+        </section>
+        <!-- details meal section end -->
 
         <!-- meals section start -->
         <section id="meals">
